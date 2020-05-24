@@ -23,9 +23,9 @@ class BasePage:
         return self.driver.find_element(by, value)
 
     # 封装显示等待，直到ele元素被选择，时间默认为10s，当前可根据需要更改时间
-    def wait_selected(self, ele, time=15):
+    def wait_selected(self, ele, time=10):
         return WebDriverWait(self.driver, time).until(expected_conditions.element_to_be_selected(ele))
 
     # 封装显示等待，直到ele元素可被点击
-    def wait_click(self, ele, time=20):
+    def wait_click(self, ele, time=10):
         return WebDriverWait(self.driver, time).until(expected_conditions.element_to_be_clickable(ele))

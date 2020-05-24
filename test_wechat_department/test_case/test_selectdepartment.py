@@ -9,7 +9,7 @@ class TestSelectDepartment:
     def test_selectdepartment(self):
         # assert "" in self.main.goto_selectdepartment().select_department().get_member()
         # pass
-        self.main.goto_selectdepartment().select_department()
+        self.main.goto_selectdepartment().select_department().get_member()
 
     def teardown(self):
         pass

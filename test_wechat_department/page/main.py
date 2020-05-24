@@ -18,7 +18,7 @@ class Main(BasePage):  # 继承BasePage类
         # 勾选需要设置的人
         ele = self.find(By.XPATH, '//*[@id="member_list"]/tr[1]//input')  # 这里找到第一个人前面的勾选框元素
         ele.click()  # 点击该元素
-        self.wait_selected(ele)  # 调用隐式等待方法，直到该元素被选择
+        self.wait_selected(ele)  # 调用隐式等待方法，直到该元素被选择————这里显等成功
         # 点击设置所在部门
         self.find(By.XPATH, '//*[@id="js_contacts36"]/div/div[2]/div/div[2]/div[3]/div[1]/a[2]').click()
 
