@@ -21,7 +21,7 @@ class SelectDepartment(BasePage):  # 继承BasePage类
         # 返回通讯录界面
         return Contact(self.driver)  # 这里相当于实例化Contact类，并传入self.driver
 
-    # 给“选择范围”弹框建模——无效选择的部门
+    # 给“选择范围”弹框建模——取消选择的部门
     def cancel_department(self):
         # 选择部门
         sleep(10)  # 强等成功
