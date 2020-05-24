@@ -1,15 +1,19 @@
+from test_selenium.test_wechat_department.page.basepage import BasePage
 from test_selenium.test_wechat_department.page.main import Main
 
 
-class TestSelectDepartment:
+class TestSelectDepartment(BasePage):  # 继承BasePage类
 
     def setup(self):
-        self.main = Main()
-
-    def test_selectdepartment(self):
-        # assert "" in self.main.goto_selectdepartment().select_department().get_member()
-        # pass
-        self.main.goto_selectdepartment().select_department().get_member()
+        self.main = Main()  # 实例化Main类
 
     def teardown(self):
+        # self.quit()  # 调用BasePage类的quit方法，回收资源
         pass
+
+    def test_selectdepartment(self):
+        assert "test" in self.main.goto_selectdepartment().select_department().get_member()  # 断言被选择的部门在部门里面
+
+    def test_canceldepartment(self):
+        assert "test" not in self.main.goto_selectdepartment().cancel_department().get_member()  # 断言被取消的部门不在部门里面
+

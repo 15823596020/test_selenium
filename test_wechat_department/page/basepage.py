@@ -29,3 +29,6 @@ class BasePage:
     # 封装显示等待，直到ele元素可被点击
     def wait_click(self, ele, time=10):
         return WebDriverWait(self.driver, time).until(expected_conditions.element_to_be_clickable(ele))
+
+    def quit(self):
+        return self.driver.quit()
