@@ -6,7 +6,7 @@ from test_selenium.test_wechat_department.page.basepage import BasePage
 class Contact(BasePage):  # 继承BasePage类
 
     # 给通讯录页面建模
-    def get_member(self):  # 显示所有成员信息
+    def get_department(self):  # 显示所有成员信息
         sleep(5)  # 强等生效
         ele = self.find(By.XPATH, '//*[@id="member_list"]/tr[1]/td[4]/span')  # 获取所操作人物对应的部门元素
         # self.wait_click(ele)  # 直到该元素可见显等失败

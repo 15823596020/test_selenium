@@ -12,8 +12,8 @@ class TestSelectDepartment(BasePage):  # 继承BasePage类
         pass
 
     def test_selectdepartment(self):
-        assert "test" in self.main.goto_selectdepartment().select_department().get_member()  # 断言被选择的部门在部门里面
+        assert "test" in self.main.goto_selectdepartment().select_department().get_department()  # 断言被选择的部门在部门里面
 
     def test_canceldepartment(self):
-        assert "test" not in self.main.goto_selectdepartment().cancel_department().get_member()  # 断言被取消的部门不在部门里面
+        assert "test" not in self.main.goto_selectdepartment().cancel_department().get_department()  # 断言被取消的部门不在部门里面
 
