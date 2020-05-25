@@ -30,6 +30,10 @@ class BasePage:
     def wait_click(self, ele, time=10):
         return WebDriverWait(self.driver, time).until(expected_conditions.element_to_be_clickable(ele))
 
+    # 封装刷新方法
+    def refresh(self):
+        return self.driver.refresh()
+
     # 封装关闭浏览器的方法
     def quit(self):
         return self.driver.quit()
