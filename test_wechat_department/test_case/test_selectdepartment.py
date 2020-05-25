@@ -7,7 +7,7 @@ class TestSelectDepartment:  # 继承BasePage类
         self.main = Main()  # 实例化Main类
 
     def teardown(self):
-        # self.quit()  # 调用BasePage类的quit方法，回收资源,case不要继承page，用实例化
+        # self.main.quit()  # 调用BasePage类的quit方法，回收资源,case不要继承page，用实例化
         pass
 
     def test_selectdepartment(self):

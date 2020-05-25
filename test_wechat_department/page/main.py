@@ -24,4 +24,3 @@ class Main(BasePage):  # 继承BasePage类
 
         # 进入选择范围弹框
         return SelectDepartment(self.driver)  # 这里相当于实例化SelectDepartment类，并传入self.driver
-
