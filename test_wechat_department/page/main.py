@@ -20,7 +20,7 @@ class Main(BasePage):  # 继承BasePage类
         ele.click()  # 点击该元素
         self.wait_selected(ele)  # 调用隐式等待方法，直到该元素被选择————这里显等成功
         # 点击设置所在部门
-        self.find(By.XPATH, '//*[@id="js_contacts36"]/div/div[2]/div/div[2]/div[3]/div[1]/a[2]').click()
+        self.find(By.CSS_SELECTOR, '.js_move').click()
 
         # 进入选择范围弹框
         return SelectDepartment(self.driver)  # 这里相当于实例化SelectDepartment类，并传入self.driver

@@ -10,7 +10,9 @@ class SelectDepartment(BasePage):  # 继承BasePage类
     def select_department(self):
         # 选择部门
         sleep(10)  # 强等成功
-        ele = self.find(By.XPATH, '//*[contains(@class,"ww_dialog_body")]//*[@id=1688852935766558]')  # 这里定位需要移动到的部门元素
+        # 找__dialog__MNDialog的窗体，并且窗体的style不包含空的下级子元素id就是需要的
+        ele = self.find(By.XPATH, '//*[contains(@id,"__dialog__MNDialog") and not(contains(@style,"none"))] //*[@id="1688852935766558"]')  # 这里定位需要移动到的部门元素
+
         # self.wait_click(ele)  # 调用隐式等待方法，直到该元素可被点击————————显等失败
         # sleep(10)  # 强等成功
         ele.click()  # 选择该元素
@@ -25,7 +27,8 @@ class SelectDepartment(BasePage):  # 继承BasePage类
     def cancel_department(self):
         # 选择部门
         sleep(10)  # 强等成功
-        ele = self.find(By.XPATH, '//*[contains(@class,"ww_dialog_body")]//*[@id=1688852935766558]')  # 这里定位需要移动到的部门元素
+        # 找__dialog__MNDialog的窗体，并且窗体的style不包含空的下级子元素id就是需要的
+        ele = self.find(By.XPATH, '//*[contains(@id,"__dialog__MNDialog") and not(contains(@style,"none"))] //*[@id="1688852935766558"]')  # 这里定位需要移动到的部门元素
         # self.wait_click(ele)  # 调用隐式等待方法，直到该元素可被点击————————显等失败
         # sleep(10)  # 强等成功
         ele.click()  # 选择该元素
